@@ -5,6 +5,7 @@ head
 	title Movi.es
 	meta(name="viewport", content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0")
 	<link href="https://fonts.googleapis.com/css?family=Lato:400,700" rel="stylesheet">
+	link(rel="stylesheet", href="css/fontawesome-all.min.css")
 	link(rel="stylesheet", href="css/normalize.css")
 	link(rel="stylesheet", href="css/estilos.css")
 body
@@ -12,10 +13,28 @@ body
 		navbar.Movie-navbar
 			.Movie-navbar-brand
 				figure.Movie-navbar-brand-logo
-					img(src="http://s3.amazonaws.com/pix.iemoji.com/images/emoji/apple/ios-11/256/popcorn.png", alt="popcorn")
+					img(src="img/popcorn.png", alt="popcorn")
 				h1.Movie-navbar-brand-nombre Movie.es
 			form.Movie-navbar-form
 				input(type="search", name="" placeholder="Busca tu peli, actor, actriz o director favorito").Movie-navbar-form-input
 			a(href="#").Movie-navbar-usuario
 				span.Movie-navbar-usuario-nombre Bambi Rodríguez
 				img(src="img/bambi.jpg", alt="bambi").Movie-navbar-usuario-imagen
+	aside.Menu
+		ul.Menu-list
+			li.Menu-list-item
+				a(href="#")
+					i.fa.fa-home
+					p Home
+			li.Menu-list-item
+				a(href="#")
+					i.fa.fa-fire
+					p Trending
+			li.Menu-list-item
+				a(href="#")
+					i.fa.fa-heart
+					p Más likes
+			li.Menu-list-item
+				a(href="#")
+					p.fa
+					span Ajustes
