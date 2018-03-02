@@ -9,7 +9,7 @@ head
 	link(rel="stylesheet", href="css/normalize.css")
 	link(rel="stylesheet", href="css/estilos.css")
 body
-	header.Movie
+	header.Movie#movie 
 		navbar.Movie-navbar
 			.Movie-navbar-brand
 				figure.Movie-navbar-brand-logo
@@ -20,8 +20,8 @@ body
 			a(href="#").Movie-navbar-usuario
 				span.Movie-navbar-usuario-nombre Bambi Rodríguez
 				img(src="img/bambi.jpg", alt="bambi").Movie-navbar-usuario-imagen
-			span.Movie-navbar-boton.fa.fa-bars
-	aside.Menu
+			span.Movie-navbar-boton.fa.fa-bars#boton
+	aside.Menu#menu
 		ul.Menu-list
 			li.Menu-list-item
 				a(href="#")
@@ -40,8 +40,8 @@ body
 				a(href="#")
 					i.fa.fa-cog
 					p Ajustes
-	section.Peliculas.active
-		span.Peliculas-flecha.fa.fa-angle-right
+	section.Peliculas.active#peliculas
+		span.Peliculas-flecha.fa.fa-angle-right#angle
 		h2.Peliculas-title Ahora en el Cine
 		.Peliculas-container
 			a(href="#").Peliculas-container-item
@@ -93,3 +93,4 @@ body
 				.Peliculas-container-item-overlay
 					h3.Peliculas-container-item-overlay-title The Secret Life of Pets
 					p.Peliculas-container-item-overlay-parrafo The quiet life of a terrier named Max is unpended when his owner takes in Duke, a stray whom Max instantly dislikes.
+	script(src="js/index.js")

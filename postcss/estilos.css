@@ -106,6 +106,9 @@ body{
 	&-title{
 		font-size: 1.2rem;
 	}
+	&-flecha{
+		display: none;
+	}
 	&-container{
 		display: grid;
 		grid-gap: 2em;
@@ -184,6 +187,7 @@ body{
 	.Movie{
 		height: 70px;
 		overflow: hidden;
+		transition: .3s;
 		&-navbar{
 			grid-template-columns: 1fr 1fr;
 			grid-template-areas: "brand burguer"
@@ -206,6 +210,7 @@ body{
 	.Peliculas{
 		position: relative;
 		&-flecha{
+			display: block;
 			position: absolute;
 			top: 0;
 			left: 0;
@@ -213,18 +218,24 @@ body{
 			padding: 1em;
 			z-index: 2;
 			color: white;
+			transition: .3s;
+			&.active{
+				transform: rotate(180deg);
+			}
 		}
 		&-container{
 			grid-template-columns: 1fr;
 		}
 		&.active{
 			grid-column-start: 1;
+			transition: .3s;
 		}
 
 	}
 	.Menu{
 		position: relative;
 		left: -100%;
+		transition: .3s;
 		&.active{
 			left: 0;
 		}
