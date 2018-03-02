@@ -5,6 +5,7 @@
 	--gris: #b2b1b6;
 }
 body{
+	margin: 0;
 	display: grid;
 	grid-template-columns: 10% 1fr;
 	grid-template-rows: 70px 1fr;
@@ -72,9 +73,35 @@ img{
 	}
 }
 .Menu{
+	align-content: space-between;
+	background: var(--colorRojo);
+	display: grid;
 	grid-area: aside;
+	padding-top: 3em;
+	z-index: 2;
+	&-list{
+		display: grid;
+		justify-content: center;
+		list-style: none;
+		margin: 0;
+		padding: 1em 0;
+		text-align: center;
+		&-item{
+			padding-bottom: 1em;
+			a{
+				color: white;
+				text-decoration: none;
+				i{
+					font-size: 2rem;
+				}
+
+			}
+		}
+	}
 }
 .Peliculas{
 	grid-area: pelis;
-	
+	img{
+		width: 50px;
+	}
 }
