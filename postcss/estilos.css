@@ -1,0 +1,80 @@
+:root{
+	--Fuente: 'Lato', sans-serif;
+	--colorRojo: #fd6766;
+	--colorNombre: #3c464f;
+	--gris: #b2b1b6;
+}
+body{
+	display: grid;
+	grid-template-columns: 10% 1fr;
+	grid-template-rows: 70px 1fr;
+	font-family: var(--Fuente);
+	grid-template-areas: "header header"
+						 "aside pelis";
+}
+img{
+	width: 100%;
+}
+.Movie{
+	grid-area: header;
+	box-shadow: 0 2px 20px 5px #f2f2f2;
+	z-index: 1;
+	&-navbar{
+		padding: 0 3em;
+		display: grid;
+		grid-template-columns: 25% 1fr 20%;
+		grid-auto-rows: 70px;
+		grid-template-areas: "brand form usuario";
+		grid-gap: 10px;
+		&-brand{
+			grid-area: brand;
+			display: flex;
+			align-items: center;
+			&-logo{
+				width: 50px;
+				margin: 0;
+			}
+			&-nombre{
+				margin: 0;
+				color: white;
+				-webkit-text-stroke: 1px var(--colorRojo);
+			}
+		}
+		&-form{
+			grid-area: form;
+			display: flex;
+			align-items: center;
+			&-input{
+				width: 100%;
+				border-radius: .25rem;
+				box-shadow: none;
+				border: 1px solid var(--gris);
+				padding: .5em;
+
+			}
+		}
+		&-usuario{
+			grid-area: usuario;
+			display: flex;
+			align-items: center;
+			justify-content: flex-end;
+			text-decoration: none;
+			&-nombre{
+				color: var(--colorNombre);
+				font-weight: bold;
+				margin-right: 1em;
+			}
+			&-imagen{
+				width: 50px;
+				border-radius: 50%;
+			}
+		}
+	}
+}
+.Menu{
+	grid-area: aside;
+}
+.Peliculas{
+	grid-area: pelis;
+	
+}
