@@ -8,4 +8,14 @@ head
 	link(rel="stylesheet", href="css/normalize.css")
 	link(rel="stylesheet", href="css/estilos.css")
 body
-	
+	header.Movie
+		navbar.Movie-navbar
+			.Movie-navbar-brand
+				figure.Movie-navbar-brand-logo
+					img(src="http://s3.amazonaws.com/pix.iemoji.com/images/emoji/apple/ios-11/256/popcorn.png", alt="popcorn")
+				h1.Movie-navbar-brand-nombre Movie.es
+			form.Movie-navbar-form
+				input(type="search", name="" placeholder="Busca tu peli, actor, actriz o director favorito").Movie-navbar-form-input
+			a(href="#").Movie-navbar-usuario
+				span.Movie-navbar-usuario-nombre Bambi Rodríguez
+				img(src="img/bambi.jpg", alt="bambi").Movie-navbar-usuario-imagen
