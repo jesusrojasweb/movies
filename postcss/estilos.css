@@ -149,3 +149,30 @@ body{
 		}
 	}
 }
+@media screen and (max-width: 1024px){
+	body{
+		height: 100vh;
+	}
+	.Peliculas{
+		&-container{
+			grid-template-columns: repeat(2, 1fr);
+			&-item{
+				&-overlay{
+					height: 20%;
+					&-parrafo{
+						opacity: 0;
+						transition: .3s;
+					}
+
+				}
+				&:hover{
+					.Peliculas-container-item-overlay{
+						&-parrafo{
+							opacity: 1;
+						}
+					}
+				}
+			}
+		}
+	}
+}
