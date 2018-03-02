@@ -176,3 +176,57 @@ body{
 		}
 	}
 }
+@media screen and (max-width: 767px){
+	body{
+		grid-template-rows: 1fr 1fr;
+		grid-template-columns: 20% 1fr;
+	}
+	.Movie{
+		height: 70px;
+		overflow: hidden;
+		&-navbar{
+			grid-template-columns: 1fr 1fr;
+			grid-template-areas: "brand burguer"
+								 "form form"
+								 "usuario usuario";
+			&-boton{
+				align-self: center;
+				justify-self: end;
+				grid-area: burguer;
+				font-size: 2rem;
+			}
+			&-usuario{
+				justify-self: center;
+			}
+		}
+		&.active{
+			height: 100%;
+		}
+	}
+	.Peliculas{
+		position: relative;
+		&-flecha{
+			position: absolute;
+			top: 0;
+			left: 0;
+			background: var(--colorRojo);
+			padding: 1em;
+			z-index: 2;
+			color: white;
+		}
+		&-container{
+			grid-template-columns: 1fr;
+		}
+		&.active{
+			grid-column-start: 1;
+		}
+
+	}
+	.Menu{
+		position: relative;
+		left: -100%;
+		&.active{
+			left: 0;
+		}
+	}
+}
