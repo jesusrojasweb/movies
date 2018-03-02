@@ -13,9 +13,7 @@ body{
 	grid-template-areas: "header header"
 						 "aside pelis";
 }
-img{
-	width: 100%;
-}
+
 .Movie{
 	grid-area: header;
 	box-shadow: 0 2px 20px 5px #f2f2f2;
@@ -34,6 +32,9 @@ img{
 			&-logo{
 				width: 50px;
 				margin: 0;
+				img{
+					width: 100%;
+				}
 			}
 			&-nombre{
 				margin: 0;
@@ -77,7 +78,7 @@ img{
 	background: var(--colorRojo);
 	display: grid;
 	grid-area: aside;
-	padding-top: 3em;
+	padding: 3em 0;
 	z-index: 2;
 	&-list{
 		display: grid;
@@ -101,7 +102,50 @@ img{
 }
 .Peliculas{
 	grid-area: pelis;
-	img{
-		width: 50px;
+	padding: 1em 3em;
+	&-title{
+		font-size: 1.2rem;
+	}
+	&-container{
+		display: grid;
+		grid-gap: 2em;
+		grid-template-columns: repeat(3, 1fr);
+		&-item{
+			position: relative;
+			color: white;
+			transition: .3s;
+			overflow: hidden;
+			&-img{
+				width: 100%;
+				vertical-align: top;
+			}
+			&-overlay{
+				background: #fd6766ba;
+				position: absolute;
+				bottom: 0;
+				right: 0;
+				left: 0;
+				color: white;
+				padding: .5em;
+				height: 50%;
+				transition: .3s;
+				&-title{
+					margin: 0 0 .5em 0;
+				}
+				&-parrafo{
+					margin: 0;
+					font-weight: 300;
+				}
+			}
+			&:hover{
+				.Peliculas-container-item-overlay{
+					height: 100%;
+					padding: 0 .5em;
+					&-title{
+						padding-top: .5em;
+					}
+				}
+			}
+		}
 	}
 }
