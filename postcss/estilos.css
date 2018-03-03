@@ -13,6 +13,7 @@ body{
 	font-family: var(--Fuente);
 	grid-template-areas: "header header"
 						 "aside pelis";
+	height: 100vh;
 }
 
 .Movie{
